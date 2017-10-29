@@ -1,14 +1,23 @@
 {{#partial "content" }}
-<section class="section">
-  <div class="container">
-    <h1 class="title">
-      Riemann Mission Control
-    </h1>
-    <p class="subtitle">
-      bip...bip...This is Riemann mission control... <strong>Hyperspace core online !</strong>
-    </p>
-  </div>
-</section>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        Riemann Mission Control
+      </h1>
+      <p class="subtitle">
+        bip...bip...This is Riemann mission control... <strong>Hyperspace core online !</strong>
+      </p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h2 class="title">Rules</h2>
+      <div class="field">
+        <a class="button" href="/rules/add">Add a new rule</a>
+      </div>
+      {{> rules/rules_table}}
+    </div>
+  </section>
 {{/partial}}
 
 {{> base}}
