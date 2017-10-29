@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
     newLine.insertCell(1).appendChild(document.createTextNode(predicate.arguments));
   }
 
-  function addPredicate() {
+  function addPredicate(event) {
+    event.preventDefault();
     var argumentsInput = document.getElementById('predicate-arguments-input');
     var predicateTypeSelect = document.getElementById('predicate-type-select');
     var predicateType = predicateTypeSelect.options[predicateTypeSelect.selectedIndex].value;
@@ -31,10 +32,27 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('Add predicate', predicate);
     addPredicateToTable(predicate);
     predicates.push(predicate);
+    document.getElementById('predicate-form').reset();
   }
 
-  var addButton = document.getElementById('predicate-add-button');
-  addButton.onclick = addPredicate;
+  function saveRule(rule) {
+    // TODO: save rule!
+  }
+
+  function addRule(event) {
+    event.preventDefault();
+    var ruleActionInput = document.getElementById('rule-action-name-input');
+    var ruleAction = ruleActionInput.value;
+    var rule = {action: ruleAction, predicates: predicates};
+    saveRule(rule);
+    document.getElementById('rule-form').reset();
+  }
+
+  var addPredicateButton = document.getElementById('predicate-add-button');
+  addPredicateButton.onclick = addPredicate;
+
+  var addRuleButton = document.getElementById('rule-add-button');
+  addRuleButton.onclick = addRule;
 
   var predicateTypeSelect = document.getElementById('predicate-type-select');
   predicateTypeSelect.addEventListener("change", function (event) {
