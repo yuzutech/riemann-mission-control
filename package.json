@@ -1,0 +1,22 @@
+{
+  "name": "riemann-mission-control",
+  "version": "0.1.0",
+  "description": "Riemann Mission Control",
+  "scripts": {
+    "build": "node build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuzutech/riemann-mission-control.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yuzutech/riemann-mission-control/issues"
+  },
+  "homepage": "https://github.com/yuzutech/riemann-mission-control#readme",
+  "dependencies": {
+    "bulma": "^0.6.0"
+  }
+}

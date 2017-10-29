@@ -1,0 +1,12 @@
+= Riemann Mission Control
+
+== Build and run
+
+ $ mvn clean install
+ $ java -jar target/riemann-mission-control.jar
+
+== License
+
+Copyright © 2017 Guillaume Grossetie. Free use of this software is granted under the terms of the MIT License.
+
+See the LICENSE file for details.
